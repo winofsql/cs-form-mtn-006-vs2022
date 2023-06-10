@@ -2,25 +2,25 @@
 
 - ### Enter キーを TAB キーとして使用する
 ```cs
-        // *****************************************
-        // ( フォームの KeyPreview : True )
-        // *****************************************
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+// *****************************************
+// ( フォームの KeyPreview : True )
+// *****************************************
+private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+{
+    if (e.KeyChar == ControlChars.Cr)
+    {
+        if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
         {
-            if (e.KeyChar == ControlChars.Cr)
-            {
-                if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
-                {
-                    this.SelectNextControl(this.ActiveControl, false, true, true, true);
+            this.SelectNextControl(this.ActiveControl, false, true, true, true);
 
-                }
-                else
-                {
-                    this.SelectNextControl(this.ActiveControl, true, true, true, true);
-                }
-                e.Handled = true;
-            }
         }
+        else
+        {
+            this.SelectNextControl(this.ActiveControl, true, true, true, true);
+        }
+        e.Handled = true;
+    }
+}
 ```
 
 - ### 入力チェック( close ボタンの考慮 )
