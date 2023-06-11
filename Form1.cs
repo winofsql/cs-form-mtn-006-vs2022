@@ -1,7 +1,5 @@
-using Microsoft.VisualBasic;
 using System.Data.Odbc;
 using System.Diagnostics;
-using static System.Net.Mime.MediaTypeNames;
 using System.Text.RegularExpressions;
 
 namespace cs_form_mtn_006_vs2022
@@ -221,7 +219,7 @@ namespace cs_form_mtn_006_vs2022
         // *****************************************
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ControlChars.Cr)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
                 {
