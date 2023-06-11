@@ -7,7 +7,7 @@
 // *****************************************
 private void Form1_KeyPress(object sender, KeyPressEventArgs e)
 {
-    if (e.KeyChar == ControlChars.Cr)
+    if (e.KeyChar == (char)Keys.Enter)
     {
         if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
         {
