@@ -71,3 +71,5 @@ private void 社員コード_Validated(object sender, EventArgs e)
     }
 }
 ```
+
+※ [参考](https://atmarkit.itmedia.co.jp/fdotnet/vblab/vb2005m_04/vb2005m_04_02.html)
