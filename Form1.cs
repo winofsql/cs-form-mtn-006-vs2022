@@ -272,12 +272,8 @@ namespace cs_form_mtn_006_vs2022
 
         private void 社員コード_Validated(object sender, EventArgs e)
         {
-            if (this.ActiveControl != this.社員コード)
-            {
-                // 入力チェック終了後の処理
-                this.社員コード.Text = $"{Int32.Parse(this.社員コード.Text):0000}";
-
-            }
+			// 入力チェック終了後の処理
+			this.社員コード.Text = $"{Int32.Parse(this.社員コード.Text):0000}";
         }
     }
 }
